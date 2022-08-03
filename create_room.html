@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    html {
+        height: 100%;
+    }
+    body {
+        margin: 0;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    /* Backgrounds */
+    .main-bg {
+        background: #424242;
+        background: linear-gradient( #424242, #212121);
+    }
+    .page-title{
+    text-align:center;
+    background:gray;padding:10px;
+    border-radius: 10px 10px 0 0;
+    }
+
+    .container{
+    background:#DCDCDC;
+    padding: 0 !important;
+    margin: 40px 0 0 0;
+    border-radius:10px;
+    max-width:50% !important;
+
+    }
+
+    .cr-form{
+    padding:10px 20px 10px 20px
+    }
+
+
+
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Create room</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body class="main-bg">
+<div class="container">
+    <h3 class="page-title">Create Examination Room</h3>
+    <form action="{{ url_for('create_room') }}" method="post" class="cr-form">
+        <p>Room ID</p>
+        <p><input type="text" name="roomId"/></p>
+
+        <p>Description</p>
+        <p><textarea rows="5" cols="30" name="description"></textarea></p>
+
+        <p>Question paper link</p>
+        <p><input type="text" name="questionPaper"/></p>
+
+
+        <p><input type="submit" class="btn btn-info" value="submit"/></p>
+        <br>
+
+    </form>
+
+
+</div>
+</body>
+</html>
